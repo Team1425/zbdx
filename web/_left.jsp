@@ -25,7 +25,7 @@
 		<a href="orderList" target="rightFrame">› 教师管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 学生管理</a>
+		<a href="/hlzStudentList" target="rightFrame">› 学生管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="/hjlDoctorList" target="rightFrame">› 医院管理</a>
