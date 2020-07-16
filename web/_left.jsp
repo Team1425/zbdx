@@ -31,7 +31,7 @@
 		<a href="/hjlDoctorList" target="rightFrame">› 医院管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 社团管理</a>
+		<a href="${pageContext.request.contextPath}/hjGroupList" target="rightFrame">› 社团管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="orderList" target="rightFrame">› 图书管理</a>
