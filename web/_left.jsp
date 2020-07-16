@@ -19,7 +19,7 @@
 		<a href="orderList" target="rightFrame">› 宿舍管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 学院管理</a>
+		<a href="/wghcollegeList" target="rightFrame">› 学院管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="orderList" target="rightFrame">› 教师管理</a>
@@ -37,7 +37,7 @@
 		<a href="orderList" target="rightFrame">› 图书管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 失物管理</a>
+		<a href="${pageContext.request.contextPath}/by_lostList" target="rightFrame">› 失物管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="orderList" target="rightFrame">› 用户管理</a>
