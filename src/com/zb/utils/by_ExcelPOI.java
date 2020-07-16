@@ -13,7 +13,6 @@ public class by_ExcelPOI {
     public void export(String [] titles, ServletOutputStream out){
 
         try {
-            //以下代码，能百度复制就不要去记，懂逻辑，懂值替换即可
             //1.创建一个workbook，对应一个excel文件
             HSSFWorkbook workbook = new HSSFWorkbook();
             //2.在workbook中添加一个sheet，对应excel中的sheet
