@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: l
-  Date: 2020-7-14
-  Time: 10:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page pageEncoding="utf-8"%>
 <!-- 引入JSTL标签库 -->
 <%@ taglib prefix="c"
