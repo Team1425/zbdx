@@ -34,7 +34,7 @@
 		<a href="orderList" target="rightFrame">› 社团管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 图书管理</a>
+		<a href="${pageContext.request.contextPath}/booksList" target="rightFrame">› 图书管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="${pageContext.request.contextPath}/by_lostList" target="rightFrame">› 失物管理</a>
