@@ -22,7 +22,7 @@
 		<a href="/wghcollegeList" target="rightFrame">› 学院管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 教师管理</a>
+		<a href="${pageContext.request.contextPath}/wymTeaList" target="rightFrame">› 教师管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="/hlzStudentList" target="rightFrame">› 学生管理</a>
