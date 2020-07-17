@@ -25,7 +25,7 @@
 		<a href="orderList" target="rightFrame">› 教师管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 学生管理</a>
+		<a href="/hlzStudentList" target="rightFrame">› 学生管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="/hjlDoctorList" target="rightFrame">› 医院管理</a>
@@ -34,7 +34,7 @@
 		<a href="${pageContext.request.contextPath}/hjGroupList" target="rightFrame">› 社团管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 图书管理</a>
+		<a href="${pageContext.request.contextPath}/booksList" target="rightFrame">› 图书管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="${pageContext.request.contextPath}/by_lostList" target="rightFrame">› 失物管理</a>

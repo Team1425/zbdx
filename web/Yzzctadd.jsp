@@ -5,7 +5,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>新增订单</title>
+    <title>新增餐厅</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style type="text/css">
         body{ font-family: "微软雅黑"; background-color: #EDEDED; }
@@ -20,47 +20,35 @@
     </style>
 </head>
 <body><!-- body-start  -->
-<hr>
-<h2>新增医生</h2>
+
+<h2>新增餐厅</h2>
 <hr/>
-<form action="/hjlDoctorAdd" method="POST">
+<form action="YzzctaddServlet" method="POST">
     <table border="1">
         <tr>
-        <tr>
-            <td>医生姓名</td>
+            <td width="30%">餐厅名称</td>
             <td>
-                <input type="text" name="doctorName"/>
-            </td>
-        </tr>
-            <td width="30%">科室</td>
-            <td>
-                <select  name="departId">
-                    <c:forEach items="${deList}" var="depart">
-                        <option value="${depart.depart_id}">
-                                ${depart.depart_name}
-                        </option>
-                    </c:forEach>
-                </select>
+                <input type="text" name="ctname"/>
             </td>
         </tr>
         <tr>
-            <td>性别</td>
+            <td>联系电话</td>
             <td>
-                <input type="text" name="doctorSex"/>
+                <input type="text" name="cttel"/>
             </td>
         </tr>
         <tr>
-            <td>联系方式</td>
+            <td>餐厅地址</td>
             <td>
-                <input type="text" name="doctorTel"
+                <input type="text" name="ctaddr"
                        value=""/>
             </td>
         </tr>
         <tr>
-            <td>地址</td>
+            <td>销售额</td>
             <td>
-                <input type="text" name="doctorAddr"
-                       value="山西太原"/>
+                <input type="text" name="ctsale"
+                       value=""/>
             </td>
         </tr>
         <tr>
@@ -73,6 +61,3 @@
 
 </body><!-- body-end  -->
 </html>
-
-
-
