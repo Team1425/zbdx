@@ -20,47 +20,30 @@
     </style>
 </head>
 <body><!-- body-start  -->
-<hr>
-<h2>新增医生</h2>
+
+<h2>注册用户</h2>
 <hr/>
-<form action="/hjlDoctorAdd" method="POST">
+<form action="YzzRegServlet" method="POST">
     <table border="1">
         <tr>
-        <tr>
-            <td>医生姓名</td>
+            <td width="30%">用户类型</td>
             <td>
-                <input type="text" name="doctorName"/>
-            </td>
-        </tr>
-            <td width="30%">科室</td>
-            <td>
-                <select  name="departId">
-                    <c:forEach items="${deList}" var="depart">
-                        <option value="${depart.depart_id}">
-                                ${depart.depart_name}
-                        </option>
-                    </c:forEach>
+                <select name="usertype">
+                    <option value="管理员">管理员</option>
+                    <option value="学生">学生</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td>性别</td>
+            <td>用户名</td>
             <td>
-                <input type="text" name="doctorSex"/>
+                <input type="text" name="username"/>
             </td>
         </tr>
         <tr>
-            <td>联系方式</td>
+            <td>密码</td>
             <td>
-                <input type="text" name="doctorTel"
-                       value=""/>
-            </td>
-        </tr>
-        <tr>
-            <td>地址</td>
-            <td>
-                <input type="text" name="doctorAddr"
-                       value="山西太原"/>
+                <input type="text" name="password"/>
             </td>
         </tr>
         <tr>
@@ -68,11 +51,9 @@
                 <input type="submit" value="提 	交"/>
             </td>
         </tr>
+
     </table>
 </form>
 
 </body><!-- body-end  -->
 </html>
-
-
-

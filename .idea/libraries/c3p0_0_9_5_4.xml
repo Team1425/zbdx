@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="servlet-api">
+  <library name="c3p0-0.9.5.4">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../apache-tomcat-8.5.57/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.5.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
