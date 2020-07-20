@@ -1,7 +1,8 @@
-package com.zb.servlet;
+package com.zb.servlet.Yzzservlet;
 
-import com.zb.dao.YzzuserDao;
-import com.zb.pojo.Yzzcd;
+import com.google.gson.Gson;
+import com.zb.dao.Yzzuserdao.YzzuserDao;
+import com.zb.pojo.Yzzpojo.Yzzct;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,14 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/YzzstudentlistServlet")
-public class YzzstudentlistServlet extends HttpServlet {
+@WebServlet("/YzzShowsaleServlet")
+public class YzzShowsaleServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         YzzuserDao yzzuserDao=new YzzuserDao();
-        List<Yzzcd> list=yzzuserDao.findallcd();
-        request.setAttribute("listcd",list);
-        System.out.println(list);
-        request.getRequestDispatcher("/Yzzstudent.jsp").forward(request,response);
+        List<Yzzct> list=yzzuserDao.findall();
+        Gson gson=new Gson();
+        String json=gson.toJson(list);
+        /*System.out.println(json);*/
+        response.getWriter().write(json);
     }
 }

@@ -1,7 +1,7 @@
-package com.zb.servlet;
+package com.zb.servlet.Yzzservlet;
 
-import com.zb.dao.YzzuserDao;
-import com.zb.pojo.Yzzct;
+import com.zb.dao.Yzzuserdao.YzzuserDao;
+import com.zb.pojo.Yzzpojo.Yzzcd;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,14 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/YzzCTinfoServlet")
-public class YzzCTinfoServlet extends HttpServlet {
+@WebServlet("/YzzCDinfoServlet")
+public class YzzCDinfoServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id=Integer.parseInt(request.getParameter("id"));
         YzzuserDao yzzuserDao = new YzzuserDao();
-        Yzzct yzzct= yzzuserDao.ctfindbyid(id);
-        request.setAttribute("yzzct",yzzct);
-        request.getRequestDispatcher("/Yzzctupdate.jsp").forward(request,response);
+        Yzzcd yzzcd= yzzuserDao.cdfingbyid(id);
+        System.out.println(yzzcd);
+        request.setAttribute("yzzcd",yzzcd);
+        request.getRequestDispatcher("/Yzzcdupdate.jsp").forward(request,response);
     }
 }
