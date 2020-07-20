@@ -20,8 +20,8 @@
 
     <title>社团管理</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script type="text/javascript">
-    </script>
+    <script type="text/javascript"></script>
+
     <style>
         .delete a:hover {
             background-color: red;
@@ -48,7 +48,7 @@
                     <a href="hj_group_add.jsp">增加社团</a>
                 </li>
                 <li>
-                    <a href="#">查看社团人数</a>
+                    <a href="#" onclick="showman()">查看社团人数</a>
                 </li>
                 <li class="active">
                     选择要进行的操作
@@ -116,7 +116,80 @@
             </table>
         </div>
     </div>
+    <div style="float: right">
+        <form action="${pageContext.request.contextPath}/downExcel">
+            <input type="submit" value="导出">
+        </form>
+    </div>
+
 </div>
+<div style="width: 100%;float: none;display: block">
+    <div id="main" style="display: none; width:80%;height: 350px;margin: 0px auto">
+    </div>
+</div>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    function showman() {
+        $("#main").css("display","block")
+// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '社团人数统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['人数']
+            },
+            xAxis: {
+                data: []
+            },
+            yAxis: {},
+            series: [{
+                name: '人数',
+                type: 'bar',
+                data: [],
+            }]
+        };
+        myChart.showLoading();
+        //设置加载动画
+        var names = [];//用来接收社团名称
+        var mans=[];//用来接收人数
+        //利用ajax请求发起数据请求
+        $.ajax({
+            url:"showMan",
+            type:"post",
+            data:{},
+            dataType:"json",
+            success:function (result) {
+                console.log(result)
+                for (var i=0;i<result.length;i++){
+                    names.push(result[i].hj_grp_name);
+                }
+                for (var i=0;i<result.length;i++){
+                    mans.push(result[i].hj_grp_total);
+                }
+                myChart.hideLoading();
+                //隐藏加载动画
+                myChart.setOption({
+                    xAxis: {
+                        data: names
+                    },
+                    series: [{
+                        data: mans
+                    }]
+                })
+            }
+        })
+
+        myChart.setOption(option);
+        // 使用刚指定的配置项和数据显示图表。
+    }
+</script>
+
 <script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
 <!-- Bootstrap核心js -->
 <script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>

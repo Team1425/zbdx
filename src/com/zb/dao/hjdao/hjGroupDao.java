@@ -101,5 +101,22 @@ public class hjGroupDao {
         }finally {
             DBUtils.close(conn);
         }
+
+    }
+    public List<hjGroup> showMan() throws Exception {
+        Connection conn = DBUtils.getConnectionByDatasource();
+        String sql = "select hj_grp_name,hj_grp_total from hj_grp";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        hjGroup hjgroup =null;
+        List<hjGroup> list = new ArrayList<>();
+        while (rs.next()){
+            hjgroup=new hjGroup();
+            hjgroup.setHj_grp_name(rs.getString("hj_grp_name"));
+            hjgroup.setHj_grp_total(rs.getInt("hj_grp_total"));
+            list.add(hjgroup);
+        }
+        System.out.println(list);
+        return list;
     }
 }

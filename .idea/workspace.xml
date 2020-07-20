@@ -5,58 +5,33 @@
       <artifact name="zbdx:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="891dced0-cb47-48e2-afbf-e1769e4ad21b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/dao/SzbExaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/dao/SzbExaRootDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/pojo/Szb_Exa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/pojo/Szb_ExaRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaAddServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaHandleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaInfoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaRootListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaRootLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaRootRegServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zb/servlet/ExaUpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_Fail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_Login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_Register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_exaAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_exaHandle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_exaInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_exaList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/szb_rootList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c4431c1-e5d6-479b-93df-ce6e9f187fc1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/daily.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/671ddfcb-6633-4878-86fd-d763bdf360b4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/dao/by_LostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/dao/by_LostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/dao/wghCollegeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/dao/wghCollegeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/dao/wymteadao/wymTeaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/dao/wymteadao/wymTeaDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/pojo/wymteacher/wymTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/WEB-INF/classes/com/zb/pojo/wymteacher/wymTeacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/_left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/_left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/by_lostList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/by_lostList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxerror.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxerror.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxfooter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxfooter.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxindex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxindex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxleft.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxleft.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxlogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxlogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxmain.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxmain.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/cyxok.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/hjldoctor_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/hjldoctor_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/findUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/findUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/updateUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/updateUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/viewUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/zbdx_war_exploded/usermanager/viewUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/zbdx/META-INF/zbdx.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/zbdx/com/zb/dao/by_LostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/zbdx/com/zb/dao/by_LostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/zbdx/com/zb/dao/wghCollegeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/zbdx/com/zb/dao/wghCollegeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/zbdx/com/zb/dao/wymteadao/wymTeaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/zbdx/com/zb/dao/wymteadao/wymTeaDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/zbdx/com/zb/pojo/wymteacher/wymTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/zbdx/com/zb/pojo/wymteacher/wymTeacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/_left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/_left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zbdx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zbdx.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zb/dao/hjdao/hjGroupDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zb/dao/hjdao/hjGroupDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hj_group_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/hj_group_list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +61,15 @@
   <component name="ProjectId" id="1enHn5S7jEykLTdQyi6GpTM3mET" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/zb/dao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -108,10 +83,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ IDEA 2020.1.2\workspace\zbdx\web" />
+      <recent name="D:\IntelliJ IDEA 2020.1.2\workspace\zbdx\src\com\zb\servlet\hjservlet" />
+      <recent name="D:\IntelliJ IDEA 2020.1.2\workspace\zbdx\src\com\zb\dao\hjdao" />
       <recent name="E:\联合项目\zbdxxx\src\com\zb\dao" />
       <recent name="E:\联合项目\zbdxxx\src\com\zb\pojo" />
-      <recent name="E:\联合项目\zbdxxx\src\com\zb\servlet" />
-      <recent name="E:\联合项目\zbdxxx\web" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,28 +165,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -228,11 +182,23 @@
       <workItem from="1595233997518" duration="393000" />
       <workItem from="1595237664457" duration="1040000" />
       <workItem from="1595238735746" duration="257000" />
+      <workItem from="1595287918602" duration="527000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595238366607">
