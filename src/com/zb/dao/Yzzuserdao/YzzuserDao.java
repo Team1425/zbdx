@@ -1,8 +1,8 @@
-package com.zb.dao;
+package com.zb.dao.Yzzuserdao;
 
-import com.zb.pojo.Yzzcd;
-import com.zb.pojo.Yzzct;
-import com.zb.pojo.Yzzuser;
+import com.zb.pojo.Yzzpojo.Yzzcd;
+import com.zb.pojo.Yzzpojo.Yzzct;
+import com.zb.pojo.Yzzpojo.Yzzuser;
 import com.zb.utils.DBUtils;
 
 import java.sql.Connection;
@@ -271,6 +271,52 @@ public class YzzuserDao {
         }finally {
             DBUtils.close(conn);
         }
+    }
+    public List<Yzzuser> dopage(Integer pageon, Integer pagesize){
+        Connection conn = DBUtils.getConnectionByDatasource();
+        List<Yzzuser> list=null;
+        try {
+            String sql="select * from yzzuser limit ?,?";
+            PreparedStatement ps =conn.prepareStatement(sql);
+            ps.setInt(1,pageon);
+            ps.setInt(2,pagesize);
+            ResultSet rs=ps.executeQuery();
+            list=new ArrayList<>();
+            while (rs.next()){
+                Yzzuser yzzuser=new Yzzuser();
+                yzzuser.setId(rs.getInt("id"));
+                yzzuser.setUsername(rs.getString("username"));
+                yzzuser.setPassword(rs.getString("password"));
+                yzzuser.setType(rs.getString("type"));
+                list.add(yzzuser);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+        return list;
+    }
+    public Integer pagecount(){
+        Connection conn=null;
+        Integer count=0;
+        try {
+            conn= DBUtils.getConnectionByDatasource();
+            String sql="select count(*) from yzzuser";
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ResultSet rs=ps.executeQuery();
+
+            while (rs.next()){
+                count=rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+        return count;
     }
 
 

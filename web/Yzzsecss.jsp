@@ -29,8 +29,10 @@
 <div id="add-door">
     <a href="Yzzctadd.jsp" target="rightFrame"><input type="submit" value="新增餐厅"/></a>
     <a>&nbsp;&nbsp;&nbsp;</a>
-    <a href="Yzzreg.jsp"  target="rightFrame"><input type="submit" value="注册用户"/></a>
+    <a href="Yzzreg.jsp" target="rightFrame"><input type="submit" value="注册用户"/></a>
     <a href="YzzCDlistServlet"  target="rightFrame"><input type="submit" value="菜单管理"/></a>
+    <a href="/alipay/alipay.trade.page.pay.jsp"  target="rightFrame"><input type="submit" value="服务续租"/></a>
+    <a href="Yzzuserlist.jsp" target="rightFrame"><input type="submit" value="查看用户"/></a>
     <div style="float: right">
         <%--<form action="${pageContext.request.contextPath}/downexcel">
             <input type="submit" value="报表导出"/>

@@ -1,6 +1,7 @@
-package com.zb.servlet;
+package com.zb.servlet.Yzzservlet;
 
-import com.zb.dao.YzzuserDao;
+import com.zb.dao.Yzzuserdao.YzzuserDao;
+import com.zb.pojo.Yzzpojo.Yzzcd;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,14 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet("/YzzCTdeleteServlet")
-public class YzzCTdeleteServlet extends HttpServlet {
+@WebServlet("/YzzCDlistServlet")
+public class YzzCDlistServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer id=Integer.parseInt(request.getParameter("id"));
         YzzuserDao yzzuserDao=new YzzuserDao();
-        yzzuserDao.ctdelete(id);
-        response.sendRedirect(""+request.getContextPath()+"/CTlistServlet");
+        List<Yzzcd> list=yzzuserDao.findallcd();
+        request.setAttribute("listcd",list);
+        System.out.println(list);
+        request.getRequestDispatcher("/Yzzcdlist.jsp").forward(request,response);
+
     }
 }
