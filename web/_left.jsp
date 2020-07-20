@@ -43,7 +43,7 @@
 		<a href="cyxlogin.html"  target="rightFrame">› 用户管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 考试管理</a>
+		<a href="${pageContext.request.contextPath}/szb_exaList" target="rightFrame">› 考试管理</a>
 	</div>
 
 

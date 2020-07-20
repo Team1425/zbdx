@@ -1,11 +1,18 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: sung
+  Date: 2020/7/17
+  Time: 21:25
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page pageEncoding="utf-8"%>
 <!-- 引入JSTL标签库 -->
 <%@ taglib prefix="c"
            uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE HTML>
 <html>
 <head>
-    <title>新增订单</title>
+    <title>ExaAdd</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style type="text/css">
         body{ font-family: "微软雅黑"; background-color: #EDEDED; }
@@ -19,48 +26,46 @@
         textarea{height:100px;font-size:22px;}
     </style>
 </head>
-<body><!-- body-start  -->
-<hr>
-<h2>新增医生</h2>
+<body>
+
+<h2>新增考试安排</h2>
 <hr/>
-<form action="/hjlDoctorAdd" method="POST">
+<form action="${pageContext.request.contextPath}/szb_exaAdd" method="POST">
     <table border="1">
         <tr>
-        <tr>
-            <td>医生姓名</td>
+            <td width="30%">考试序号</td>
             <td>
-                <input type="text" name="doctorName"/>
-            </td>
-        </tr>
-            <td width="30%">科室</td>
-            <td>
-                <select  name="departId">
-                    <c:forEach items="${deList}" var="depart">
-                        <option value="${depart.depart_id}">
-                                ${depart.depart_name}
-                        </option>
-                    </c:forEach>
-                </select>
+                <input type="text" name="ExaId"/>
             </td>
         </tr>
         <tr>
-            <td>性别</td>
+            <td>考试名称</td>
             <td>
-                <input type="text" name="doctorSex"/>
+                <input type="text" name="ExaName"/>
             </td>
         </tr>
         <tr>
-            <td>联系方式</td>
+            <td>考场</td>
             <td>
-                <input type="text" name="doctorTel"
-                       value=""/>
+                <input type="text" name="ExaRoom"/>
             </td>
         </tr>
         <tr>
-            <td>地址</td>
+            <td>考试时间</td>
             <td>
-                <input type="text" name="doctorAddr"
-                       value="山西太原"/>
+                <input type="text" name="ExaTime"/>
+            </td>
+        </tr>
+        <tr>
+            <td>监考教师</td>
+            <td>
+                <input type="text" name="ExaTeacher"/>
+            </td>
+        </tr>
+        <tr>
+            <td>教师工号</td>
+            <td>
+                <input type="text" name="ExaTeacherId"/>
             </td>
         </tr>
         <tr>
@@ -71,8 +76,5 @@
     </table>
 </form>
 
-</body><!-- body-end  -->
+</body>
 </html>
-
-
-
