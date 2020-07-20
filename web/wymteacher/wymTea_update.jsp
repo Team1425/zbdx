@@ -112,6 +112,13 @@
             </td>
         </tr>
         <tr>
+            <td>薪资</td>
+            <td>
+                <input type="text" name="wymTeaSalary"
+                       value="${wymTeacher.wymTeaSalary}"/>
+            </td>
+        </tr>
+        <tr>
             <td colspan="2">
                 <input type="submit" value="提 	交"/>
             </td>

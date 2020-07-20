@@ -71,10 +71,10 @@ public class wghExcelPOI {
 
                 hssfRow.createCell(5).setCellValue(promotionNum);
             }
-            //将文件输出到客户端浏览器
-            workbook.write(out);
-            out.flush();
-            out.close();
+                //将文件输出到客户端浏览器
+                workbook.write(out);
+                out.flush();
+                out.close();
 
 
         } catch (Exception e) {

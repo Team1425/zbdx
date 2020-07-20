@@ -24,15 +24,23 @@
         #add-order{text-align:center;font-size:20px;}
     </style>
 
-    <script type="text/javascript">
-
-    </script>
+    <script type="text/javascript" src="/js/echarts.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 
 <h2>教师管理</h2>
 <div id="add-order">
     <a href="/wymteacher/wymTea_add.jsp" target="rightFrame">新增教师</a>
+    <a>&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+    <a href="#" onclick="showsale()" target="rightFrame">查看教师薪资</a>
+    <a>&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+    <a href="/wymteacher/wymTea_all.jsp" target="rightFrame">离职教师</a>
+    <div style="float: right">
+        <form action="${pageContext.request.contextPath}/downexcel">
+            <input type="submit" value="报表导出">
+        </form>
+    </div>
 </div>
 <hr/>
 <table border="1">
@@ -85,7 +93,68 @@
         </tr>
     </c:forEach>
 </table>
+<div style="width:100%;float:none;display:block">
+    <div id="main" style="width:1100px;height:350px;margin: 0px auto;display:none"></div>
+</div>
+<script type="text/javascript">
+    function showsale() {
+        $("#main").css("display","block")
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
 
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '教师薪资'
+            },
+            tooltip: {},
+            legend: {
+                data:['薪资']
+            },
+            xAxis: {
+                data: []
+            },
+            yAxis: {},
+            series: [{
+                name: '薪资',
+                type: 'bar',
+                data: []
+            }]
+        };
+
+        myChart.showLoading()
+        var names = []; //用来接收教师名称
+        var sales = []; //用来接收销量
+        $.ajax({
+            url:"/showsale",
+            type:"post",
+            data:{},
+            dataType:"json",
+            success: function (result){
+                console.log(result)
+                for (var i=0;i<result.length;i++){
+                    names.push(result[i].wymTeaName)//往最后一个元素追加
+                }
+                for (var i=0;i<result.length;i++){
+                    sales.push(result[i].wymTeaSalary)//往最后一个元素追加
+                }
+                //隐藏加载动画
+                myChart.hideLoading();
+                //覆盖数据根据数据在家数据图表
+                myChart.setOption({
+                    xAxis: {
+                        data: names
+                    },
+                    series: [{
+                        data: sales
+                    }]
+                })
+            }
+        })
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    }
+</script>
 </body><!-- body-end  -->
 </html>
 
