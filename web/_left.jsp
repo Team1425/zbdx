@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 餐厅管理</a>
+		<a href="${pageContext.request.contextPath}/Yzzlogin.jsp" target="rightFrame">› 餐厅管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="orderList" target="rightFrame">› 宿舍管理</a>
@@ -22,7 +22,7 @@
 		<a href="/wghcollegeList" target="rightFrame">› 学院管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 教师管理</a>
+		<a href="${pageContext.request.contextPath}/wymTeaList" target="rightFrame">› 教师管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="/hlzStudentList" target="rightFrame">› 学生管理</a>
@@ -37,10 +37,10 @@
 		<a href="${pageContext.request.contextPath}/booksList" target="rightFrame">› 图书管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="${pageContext.request.contextPath}/by_lostList" target="rightFrame">› 失物管理</a>
+		<a href="${pageContext.request.contextPath}/by_lostShow.jsp" target="rightFrame">› 失物管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 用户管理</a>
+		<a href="cyxlogin.html"  target="rightFrame">› 用户管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="orderList" target="rightFrame">› 考试管理</a>

@@ -18,6 +18,7 @@ public class wymTeacher {
     private String wymTeaPhonenum;
     private String wymTeaEmail;
     private String wymTeaState;
+    private String wymTeaSalary;
 
     public Integer getWymTeaId() {
         return wymTeaId;
@@ -131,6 +132,14 @@ public class wymTeacher {
         this.wymTeaState = wymTeaState;
     }
 
+    public String getWymTeaSalary() {
+        return wymTeaSalary;
+    }
+
+    public void setWymTeaSalary(String wymTeaSalary) {
+        this.wymTeaSalary = wymTeaSalary;
+    }
+
     @Override
     public String toString() {
         return "wymTeacher{" +
@@ -148,6 +157,7 @@ public class wymTeacher {
                 ", wymTeaPhonenum='" + wymTeaPhonenum + '\'' +
                 ", wymTeaEmail='" + wymTeaEmail + '\'' +
                 ", wymTeaState='" + wymTeaState + '\'' +
+                ", wymTeaSalary='" + wymTeaSalary + '\'' +
                 '}';
     }
 }
