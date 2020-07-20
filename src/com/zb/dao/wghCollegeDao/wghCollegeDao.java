@@ -1,8 +1,8 @@
-package com.zb.dao;
+package com.zb.dao.wghCollegeDao;
 
 
 
-import com.zb.pojo.wghCollege;
+import com.zb.pojo.wghpojo.wghCollege;
 import com.zb.utils.DBUtils;
 
 import java.sql.Connection;
@@ -113,7 +113,7 @@ public class wghCollegeDao {
 
     public List<wghCollege> showRate(){
         Connection conn = DBUtils.getConnectionByDatasource();
-        String sql = "select name,promotion_rate from tb_college";
+        String sql = "select name,promotion_rate from tb_wghcollege";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();

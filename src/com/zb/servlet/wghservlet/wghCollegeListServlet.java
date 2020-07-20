@@ -1,7 +1,7 @@
 package com.zb.servlet.wghservlet;
 
-import com.zb.dao.wghCollegeDao;
-import com.zb.pojo.wghCollege;
+import com.zb.dao.wghCollegeDao.wghCollegeDao;
+import com.zb.pojo.wghpojo.wghCollege;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +22,7 @@ public class wghCollegeListServlet extends HttpServlet{
         try {
             List<wghCollege> list = wghCollegeDao.findAll();
             request.setAttribute("list",list);
-            request.getRequestDispatcher("/wghcollege_list.jsp").forward(request,response);
+            request.getRequestDispatcher("/wghCollege/wghcollege_list.jsp").forward(request,response);
         } catch (SQLException e) {
             e.printStackTrace();
         }

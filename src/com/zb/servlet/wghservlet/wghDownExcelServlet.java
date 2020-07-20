@@ -20,7 +20,7 @@ public class wghDownExcelServlet extends HttpServlet {
         //2.设置头文件，让浏览器去下载
         response.setHeader("Content-Disposition","attachment;fileName=doorlist.xls");
         //3.预先设置表头
-        String[] wgh_titles = {"编号","学院名称","学院院长","教师人数","学生人数","升学率(单位:%)"};
+        String[] wgh_titles = {"编号","学院名称","学院院长","教师人数","学生人数","就业率(单位:%)"};
         //调用ExcelPOI（自己创建的类）,调用里面的方法帮我们生成Excel
         wghExcelPOI wghExcelPOI = new wghExcelPOI();
         wghExcelPOI.excelport(wgh_titles,out);

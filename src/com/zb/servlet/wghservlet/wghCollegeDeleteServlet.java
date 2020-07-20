@@ -1,6 +1,6 @@
 package com.zb.servlet.wghservlet;
 
-import com.zb.dao.wghCollegeDao;
+import com.zb.dao.wghCollegeDao.wghCollegeDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -18,8 +18,8 @@
 	hr{ margin-bottom:20px; border:1px solid #aaa; }
 	#add-college{text-align:center;font-size:20px;}
 </style>
-	<script type="text/javascript" src="js/echarts.js"></script>
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/echarts.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
 </head>
 <body><!-- body-start  -->
 
@@ -27,7 +27,7 @@
 <div id="add-college">
 	<a href="wghcollege_add.jsp" target="rightFrame">新增学院</a>
 	<a>&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-	<a href="#" target="rightFrame" onclick="wghpromotrate()">查看学院升学率</a>
+	<a href="#" target="rightFrame" onclick="wghpromotrate()">查看学院就业率</a>
 	<div style="float: right">
 		<form action="${pageContext.request.contextPath}/wghdownexcel">
 			<input type="submit" value="报表导出"/>
@@ -43,7 +43,7 @@
 		<th>学院院长</th>
 		<th>教师人数</th>
 		<th>学生人数</th>
-		<th>升学率(单位:%)</th>
+		<th>就业率(单位:%)</th>
 		<th class="width-80">操 作</th>
 	</tr>
 
@@ -80,18 +80,18 @@
         // 指定图表的配置项和数据
         var option = {
             title: {
-                text: '学院升学率(单位:%)'
+                text: '学院就业率(单位:%)'
             },
             tooltip: {},
             legend: {
-                data:['升学率(单位:%)']
+                data:['就业率(单位:%)']
             },
             xAxis: {
                 data: []
             },
             yAxis: {},
             series: [{
-                name: '升学率(单位:%)',
+                name: '就业率(单位:%)',
                 type: 'bar',
                 data: []
             }]

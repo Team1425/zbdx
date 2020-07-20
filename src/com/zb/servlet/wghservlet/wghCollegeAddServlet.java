@@ -1,7 +1,7 @@
 package com.zb.servlet.wghservlet;
 
-import com.zb.dao.wghCollegeDao;
-import com.zb.pojo.wghCollege;
+import com.zb.dao.wghCollegeDao.wghCollegeDao;
+import com.zb.pojo.wghpojo.wghCollege;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

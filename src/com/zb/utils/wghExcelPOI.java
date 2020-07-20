@@ -1,8 +1,8 @@
 package com.zb.utils;
 
 
-import com.zb.dao.wghCollegeDao;
-import com.zb.pojo.wghCollege;
+import com.zb.dao.wghCollegeDao.wghCollegeDao;
+import com.zb.pojo.wghpojo.wghCollege;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 

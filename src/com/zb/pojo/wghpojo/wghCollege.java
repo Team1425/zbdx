@@ -1,4 +1,4 @@
-package com.zb.pojo;
+package com.zb.pojo.wghpojo;
 
 public class wghCollege {
     private Integer wgh_id;
