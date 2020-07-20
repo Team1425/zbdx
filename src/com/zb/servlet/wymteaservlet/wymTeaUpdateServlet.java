@@ -28,6 +28,7 @@ public class wymTeaUpdateServlet extends javax.servlet.http.HttpServlet {
         String wymTeaPhonenum= req.getParameter("wymTeaPhonenum");
         String wymTeaEmail= req.getParameter("wymTeaEmail");
         String wymTeaState= req.getParameter("wymTeaState");
+        String wymTeaSalary = req.getParameter("wymTeaSalary");
 
         Date wymTeaBirthday=null;
         Date wymTeaStartdate=null;
@@ -62,6 +63,7 @@ public class wymTeaUpdateServlet extends javax.servlet.http.HttpServlet {
         wymTeacher.setWymTeaEmail(wymTeaEmail);
         wymTeacher.setWymTeaState(wymTeaState);
         wymTeacher.setWymTeaState("1");
+        wymTeacher.setWymTeaSalary(wymTeaSalary);
 
         wymTeaDao wymTeaDao= new wymTeaDao();
         wymTeaDao.updateById(wymTeacher);
