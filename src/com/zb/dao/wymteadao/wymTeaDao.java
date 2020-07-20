@@ -5,7 +5,6 @@ import com.zb.utils.DBUtils;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class wymTeaDao {
@@ -48,6 +47,7 @@ public class wymTeaDao {
 
     public void addTeacher (wymTeacher wymTeacher){
         Connection conn = null;
+
         try{
             conn = DBUtils.getConnectionByDatasource();
             String sql = "insert into wymteacher values (null,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -55,9 +55,9 @@ public class wymTeaDao {
             ps.setString(1,wymTeacher.getWymTeaJobnum());
             ps.setString(2,wymTeacher.getWymTeaName());
             ps.setString(3,wymTeacher.getWymTeaSex());
-            ps.setTimestamp(4,new Timestamp(new Date().getTime()));
+            ps.setDate(4,new java.sql.Date(wymTeacher.getWymTeaBirthday().getTime()));
             ps.setString(5,wymTeacher.getWymTeaIdcard());
-            ps.setTimestamp(6,new Timestamp(new Date().getTime()));
+            ps.setDate(6,new java.sql.Date(wymTeacher.getWymTeaStartdate().getTime()));
             ps.setString(7,wymTeacher.getWymTeaCollege());
             ps.setString(8,wymTeacher.getWymTeaProfession());
             ps.setString(9,wymTeacher.getWymTeaZhicheng());
@@ -78,7 +78,7 @@ public class wymTeaDao {
         wymTeacher wymTeacher = null;
         try {
             conn = DBUtils.getConnectionByDatasource();
-            String sql = "select * from wymtracher where wymTeaId = ?";
+            String sql = "select * from wymteacher where wymTeaId = ?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1,wymTeaId);
             ResultSet rs = ps.executeQuery();
@@ -111,9 +111,8 @@ public class wymTeaDao {
         Connection conn = null;
         try{
             conn = DBUtils.getConnectionByDatasource();
-            String sql = "update wymteacher set wymTeaJobnum=?,wymTeaName=?,wymTeaSex=?,wymTeaBirthday=?,wymTeaIdcard=?,wymTeaStartdate=?,wymTeaCollege=?,wymTeaProfession=?,wymTeaZhicheng=?,wymTeaZhengzhimm=?,wymTeaPhonenum=?,wymTeaEmail=?,wymTeaState=?,wymTeaId=?";
+            String sql = "update wymteacher set wymTeaJobnum=?,wymTeaName=?,wymTeaSex=?,wymTeaBirthday=?,wymTeaIdcard=?,wymTeaStartdate=?,wymTeaCollege=?,wymTeaProfession=?,wymTeaZhicheng=?,wymTeaZhengzhimm=?,wymTeaPhonenum=?,wymTeaEmail=?,wymTeaState=? where wymTeaId=?";
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1,wymTeacher.getWymTeaId());
             ps.setString(1,wymTeacher.getWymTeaJobnum());
             ps.setString(2,wymTeacher.getWymTeaName());
             ps.setString(3,wymTeacher.getWymTeaSex());
