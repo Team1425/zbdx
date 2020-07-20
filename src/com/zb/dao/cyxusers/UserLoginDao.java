@@ -7,7 +7,7 @@ import com.zb.utils.JdbcUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
+/*我日*/
 public class UserLoginDao {
     public CyxUsers selectUsersByUserNameAndUserPwd(String username, String userpwd){
         Connection conn=null;

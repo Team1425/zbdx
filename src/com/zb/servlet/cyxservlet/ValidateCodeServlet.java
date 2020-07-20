@@ -1,5 +1,5 @@
 package com.zb.servlet.cyxservlet;
-
+/*我日*/
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 

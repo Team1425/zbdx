@@ -1,5 +1,5 @@
 package com.zb.pojo;
-
+/*我日*/
 public class CyxUsers {
     private int userid;
     private String username;

@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
+/*我日*/
 public class UserManagerDao  {
     public void insertUser(CyxUsers users){
         Connection conn=null;
