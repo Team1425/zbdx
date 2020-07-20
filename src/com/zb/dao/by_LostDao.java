@@ -13,6 +13,61 @@ import java.util.List;
 public class by_LostDao {
 
 
+
+    public List<by_Lost> dopage(Integer pageOn, Integer pageSize){
+        Connection conn = null;
+        List<by_Lost> list = null;
+        try {
+            conn = DBUtils.getConnectionByDatasource();
+            String sql = "select * from by_lost limit ?,?";
+            pageOn = (pageOn-1)*pageSize;
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1,pageOn);
+            ps.setInt(2,pageSize);
+            ResultSet rs = ps.executeQuery();
+            by_Lost lost = null;
+            list = new ArrayList<>();
+            while (rs.next()){
+                lost = new by_Lost();
+                lost.setId(rs.getInt("id"));
+                lost.setType(rs.getString("type"));
+                lost.setTrait(rs.getString("trait"));
+                lost.setTime(rs.getTimestamp("time"));
+                lost.setLost_loc(rs.getString("lost_loc"));
+                lost.setGet_loc(rs.getString("get_loc"));
+                list.add(lost);
+            }
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+
+        return null;
+    }
+
+    public Integer pagecount(){
+        Connection conn = null;
+        try {
+            conn = DBUtils.getConnectionByDatasource();
+            String sql = "select count(*) from by_lost";
+            PreparedStatement ps =  conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            Integer count = 0;
+            while (rs.next()){
+                count = rs.getInt(1);
+            }
+            return count;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+        return null;
+    }
+
+
     public List<by_Lost> findAll(){
         Connection conn = null;
         List<by_Lost> list = null;
