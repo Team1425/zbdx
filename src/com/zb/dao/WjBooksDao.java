@@ -117,6 +117,33 @@ public class WjBooksDao<conn> {
         }
 
     }
+
+    public List<WjBooks> showPrice(){
+        Connection conn = null;
+
+        try {
+            conn = DBUtils.getConnectionByDatasource();
+            String sql = "select booksname,price from wjbooks";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs =  ps.executeQuery();
+            WjBooks wjBooks = null;
+            List<WjBooks> list = new ArrayList<>();
+            while (rs.next()){
+                wjBooks = new WjBooks();
+                wjBooks.setBooksname(rs.getString("booksname"));
+                wjBooks.setPrice(rs.getString("price"));
+                list.add(wjBooks);
+            }
+            return list;
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+        return null;
+    }
     
 }
 

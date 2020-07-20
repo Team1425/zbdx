@@ -29,7 +29,22 @@
 <h2>图书管理系统</h2>
 <div id="add-books">
     <a href="wj_books_add.jsp" target="rightFrame">新增图书</a>
+    <a>&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+    <a href="#" onclick="showprice()" target="rightFrame">图书单价一览</a>
+
 </div>
+<div style="float:left">
+    <a href=${pageContext.request.contextPath}"wjdayeditor.jsp">
+        <button>日总结</button>
+    </a>
+</div>
+
+<div style="float: right">
+    <form action="${pageContext.request.contextPath}/wjdownexcel">
+        <input type="submit" value="报表导出"/>
+    </form>
+</div>
+
 <hr/>
 <table border="1">
     <tr>
@@ -61,5 +76,74 @@
 
     </c:forEach>
 </table>
+
+<div style="width: 100%;float: none;display: block">
+    <div id="main" style="width: 1100px;height: 350px;margin: 0px auto;display: none">
+
+        <script type="text/javascript">
+            function showprice() {
+                $("#main").css("display","block")
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('main'));
+                // 指定图表的配置项和数据
+                var option = {
+                    title: {
+                        text: '图书单价一览表'
+                    },
+                    tooltip: {},
+                    legend: {
+                        data:['单价']
+                    },
+                    xAxis: {
+                        data: []
+                    },
+                    yAxis: {},
+                    series: [{
+                        name: '单价',
+                        type: 'bar',
+                        data: []
+                    }]
+                };
+                //设置加载动画
+                myChart.showLoading();
+                var booksname=[];
+                var price=[];
+
+                $.ajax({
+                    url:"showprice",
+                    type:"post",
+                    data:{},
+                    dataType:"json",
+                    success:function (result) {
+                        console.log(result)
+                        for (var i=0;i<result.length;i++){
+                            booksname.push(result[i].booksname)
+                        }
+                        for (var i=0;i<result.length;i++){
+                            price.push(result[i].price)
+                        }
+                        //隐藏加载动画
+                        myChart.hideLoading();
+                        //覆盖数据
+                        myChart.setOption({
+                            xAxis: {
+                                data: booksname
+                            },
+                            series: [{
+                                data: price
+                            }]
+                            }
+                        )
+
+                    }
+                })
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            }
+        </script>
+    </div>
+</div>
+
+
 </body>
 </html>
