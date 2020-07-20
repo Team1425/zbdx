@@ -1,7 +1,7 @@
-package com.zb.servlet;
+package com.zb.servlet.Yzzservlet;
 
-import com.zb.dao.YzzuserDao;
-import com.zb.pojo.Yzzct;
+import com.zb.dao.Yzzuserdao.YzzuserDao;
+import com.zb.pojo.Yzzpojo.Yzzct;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

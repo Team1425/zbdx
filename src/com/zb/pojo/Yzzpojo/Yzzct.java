@@ -1,4 +1,4 @@
-package com.zb.pojo;
+package com.zb.pojo.Yzzpojo;
 
 public class Yzzct {
     private Integer id;
