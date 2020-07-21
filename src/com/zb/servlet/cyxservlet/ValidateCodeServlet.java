@@ -1,5 +1,8 @@
+/*
 package com.zb.servlet.cyxservlet;
-/*我日*/
+*/
+/*我日*//*
+
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
@@ -73,9 +76,11 @@ public class ValidateCodeServlet extends HttpServlet {
 
         this.doGet(request, response);
     }
-    /*
+    */
+/*
      * 给定范围获得随机颜色
-     */
+     *//*
+
     private Color getRandColor(int fc, int bc) {
         Random random = new Random();
         if (fc > 255)
@@ -86,5 +91,5 @@ public class ValidateCodeServlet extends HttpServlet {
         int g = fc + random.nextInt(bc - fc);
         int b = fc + random.nextInt(bc - fc);
         return new Color(r, g, b);
-    }
-}
+    }}
+*/
