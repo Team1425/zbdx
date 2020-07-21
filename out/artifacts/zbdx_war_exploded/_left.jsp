@@ -16,7 +16,7 @@
 		<a href="${pageContext.request.contextPath}/Yzzlogin.jsp" target="rightFrame">› 餐厅管理</a>
 	</div>
 	<div class="menu-bar">
-		<a href="orderList" target="rightFrame">› 宿舍管理</a>
+		<a href="${pageContext.request.contextPath}/dormList" target="rightFrame">› 宿舍管理</a>
 	</div>
 	<div class="menu-bar">
 		<a href="${pageContext.request.contextPath}/wghcollegeList" target="rightFrame">› 学院管理</a>
