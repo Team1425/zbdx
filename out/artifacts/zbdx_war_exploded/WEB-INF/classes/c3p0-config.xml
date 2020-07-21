@@ -4,7 +4,7 @@
     <default-config>
         <property name="user">root</property>
         <property name="password">root</property>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/booksdb</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/zbdx</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <property name="checkoutTimeout">30000</property>
         <property name="idleConnectionTestPeriod">30</property>
