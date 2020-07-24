@@ -43,7 +43,7 @@
     <a href="" target="rightFrame"><input type="submit" value="图书管理"/></a>
 </div>
 <div class="menu-bar">
-    <a href="" target="rightFrame"><input type="submit" value="失物管理"/></a>
+    <a href="${pageContext.request.contextPath}/by_lostShow.jsp" target="rightFrame"><input type="submit" value="失物管理"/></a>
 </div>
 <div class="menu-bar">
     <a href=""  target="rightFrame"><input type="submit" value="用户管理"/></a>

@@ -10,11 +10,9 @@
     <title>失物管理</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
-        #by_lostlist{
-            text-align:center;
-        }
+
     </style>
-    <link rel="stylesheet" type="text/css" href="/js/layui.css">
+    <link rel="stylesheet" type="text/css" href="js/layui.css">
     <script type="text/javascript">
 
     </script>
@@ -23,7 +21,7 @@
 
 <table id="demo" lay-filter="test"></table>
 
-<script src="/js/layui.all.js"></script>
+<script src="js/layui.all.js"></script>
 <script>
     layui.use('table', function(){
         var table = layui.table;
@@ -64,8 +62,6 @@
         });
     });
 </script>
-    <div id="by_lostlist">
-        <a href="${pageContext.request.contextPath}/by_lostList" class="layui-btn layui-btn-normal">失物管理</a>
-    </div>
+
 </body><!-- body-end  -->
 </html>
