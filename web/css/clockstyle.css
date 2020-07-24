@@ -1,0 +1,142 @@
+/***/
+/*{*/
+/*	margin: 0;*/
+/*	padding: 0;*/
+/*	box-sizing: border-box*/
+/*}*/
+/*body*/
+/*{*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	min-height: 100vh;*/
+/*	background: #68a4ff;*/
+/*}*/
+body
+{
+	background-image: url("http://139.9.142.107/clock/zbd.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+#time
+{
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-top: 70px;
+	margin-left: 100px ;
+}
+.clock
+{
+	width: 210px;
+	height: 210px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(211, 143, 16) url("http://139.9.142.107/clock/imgt.png");
+	/* opacity: 0.5; */
+	background-size: cover;
+	/* background-image: ""; */
+	border-radius: 50%;
+	border: 12px solid rgb(204, 89, 12);
+	box-shadow:inset 0 0 6px rgba(0,0,0,.1),
+		0 12px 12px rgba(0,0,0,.2),
+		0 0 0 2px rgb(216, 137, 17);
+}
+.clock::before
+{
+	content: '';
+	position: absolute;
+	width:9px;
+	height: 9px;
+	background: #848484;
+	bordre: 12px solid #fff;
+	z-index: 100000;
+ 	border-radius: 50%;
+}
+.hour,
+.min,
+.sec
+{
+	position: absolute;
+}
+.hour, .hr
+{
+	width: 96px;
+	height: 96px;
+}
+.min, .mn
+{
+	width: 114px;
+	height: 114px;
+}
+.sec, .sc
+{
+ 	width: 138px;
+	height: 138px;
+}
+.hr, .mn, .sc
+{
+	display: flex;
+	justify-content: center;
+	/*position: absolite;*/
+	border-radius: 50%;
+}
+.hr::before
+{
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 48px;
+	background: #848484;
+	z-index:10;
+	border-radius:3px 3px 0 0;
+}
+.mn::before
+{
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 48px;
+	background: #d6d6d6;
+	z-index:11;
+	border-radius:2px 2px 0 0;
+}
+.sc::before
+{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 45px;
+	background: #ff6767;
+	z-index:12;
+	border-radius:2px 2px 0 0;
+}
+
+#table
+{
+	float: right;
+	width: 500px;
+	height: auto;
+	padding-top: 30px;
+	padding-left: 20px;
+	margin-top: 100px;
+	margin-right: 100px ;
+	background: rgba(255,255,255,0.66);
+}
+#table #szbFob
+{
+	font-size: larger;
+}
+
+
+
+
+
+
+
+
+
+
+
+

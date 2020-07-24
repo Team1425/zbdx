@@ -49,7 +49,7 @@
     <a href=""  target="rightFrame"><input type="submit" value="用户管理"/></a>
 </div>
 <div class="menu-bar">
-    <a href="" target="rightFrame"><input type="submit" value="考试管理"/></a>
+    <a href="${pageContext.request.contextPath}/szb_Exh" target="rightFrame"><input type="submit" value="考试管理"/></a>
 </div>
 <div class="menu-bar">
     <a href="index.jsp" target="rightFrame"><input type="submit" value="登录"/></a>
