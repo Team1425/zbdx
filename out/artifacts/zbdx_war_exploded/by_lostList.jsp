@@ -33,7 +33,6 @@
     <h2>失物招领</h2>
     <div id="by_add-lost">
         <a href="by_lostAdd.jsp" style="text-align: center" target="rightFrame">新增失物</a>
-        <a href="by_lostShow.jsp" style="text-align: center" target="rightFrame">返回列表</a>
         <div style="float: right">
             <form action="${pageContext.request.contextPath}/by_downexcel">
                 <input type="submit" value="报表导出">
