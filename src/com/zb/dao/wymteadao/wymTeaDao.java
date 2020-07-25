@@ -3,9 +3,11 @@ package com.zb.dao.wymteadao;
 import com.zb.pojo.wymteacher.wymTeacher;
 import com.zb.utils.DBUtils;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class wymTeaDao {
@@ -15,7 +17,6 @@ public class wymTeaDao {
         List<wymTeacher> list = null;
         try {
             conn = DBUtils.getConnectionByDatasource();
-            System.out.println(conn);
             String sql = "select * from wymteacher where wymTeaState=1";
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -163,7 +164,7 @@ public class wymTeaDao {
         List<wymTeacher> list = null;
         try {
             conn = DBUtils.getConnectionByDatasource();
-            String sql = "select wymTeaName,wymTeaSalary from wymteacher";
+            String sql = "select wymTeaName,wymTeaSalary from wymteacher where wymTeaState=1";
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             wymTeacher wymTeacher = null;
@@ -240,5 +241,36 @@ public class wymTeaDao {
             DBUtils.close(conn);
         }
         return null;
+    }
+
+    public List<wymTeacher> view() {
+        Connection conn = null;
+        List<wymTeacher> list = null;
+        try {
+            conn = DBUtils.getConnectionByDatasource();
+            String sql = "select * from wymteacher where wymTeaState=1";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            wymTeacher wymTeacher = null;
+            list = new ArrayList<>();
+            while (rs.next()) {
+                wymTeacher = new wymTeacher();
+                wymTeacher.setWymTeaId(rs.getInt("wymTeaId"));
+                wymTeacher.setWymTeaJobnum(rs.getString("wymTeaJobnum"));
+                wymTeacher.setWymTeaName(rs.getString("wymTeaName"));
+                wymTeacher.setWymTeaSex(rs.getString("wymTeaSex"));
+                wymTeacher.setWymTeaCollege(rs.getString("wymTeaCollege"));
+                wymTeacher.setWymTeaProfession(rs.getString("wymTeaProfession"));
+                wymTeacher.setWymTeaZhicheng(rs.getString("wymTeaZhicheng"));
+                wymTeacher.setWymTeaPhonenum(rs.getString("wymTeaPhonenum"));
+                wymTeacher.setWymTeaEmail(rs.getString("wymTeaEmail"));
+                list.add(wymTeacher);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtils.close(conn);
+        }
+        return list;
     }
 }

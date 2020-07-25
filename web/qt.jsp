@@ -28,7 +28,7 @@
     <a href="" target="rightFrame"><input type="submit" value="学院管理"/></a>
 </div>
 <div class="menu-bar">
-    <a href="" target="rightFrame"><input type="submit" value="教师管理"/></a>
+    <a href="${pageContext.request.contextPath}/wymTeaView" target="rightFrame"><input type="submit" value="教师信息"/></a>
 </div>
 <div class="menu-bar">
     <a href="" target="rightFrame"><input type="submit" value="学生管理"/></a>
